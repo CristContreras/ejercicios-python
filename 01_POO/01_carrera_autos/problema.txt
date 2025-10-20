@@ -1,0 +1,46 @@
+Deberá desarrollar un programa en Python que simule una carrera simple de autos entre
+ varios competidores. El objetivo es aplicar los conceptos de Programación 
+ Orientada a Objetos, diseñando clases con atributos, métodos y comportamiento 
+ coherente con el problema planteado.
+
+Clase Auto
+
+Cada auto debe tener los atributos:
+
+nombre (identificador del auto o del piloto).
+
+velocidad máxima (un número aleatorio o asignado manualmente).
+
+posición actual (inicialmente 0).
+
+Se recomienda definir un método avanzar() que simule el movimiento del auto sumando a su posición una 
+cantidad aleatoria de metros por turno (por ejemplo, entre 10 y 100).
+
+Se debe implementar un método mostrar_estado() que imprima el nombre y la posición actual del auto.
+
+Clase Carrera
+
+La clase debe encargarse de coordinar la competencia entre varios autos.
+
+Debe incluir métodos para:
+
+Agregar autos a la carrera.
+
+Iniciar la carrera, ejecutando varios turnos en los que todos los autos avancen.
+
+Mostrar el progreso de cada participante en cada turno.
+
+Determinar el ganador, es decir, el auto que haya recorrido la mayor
+distancia al finalizar la cantidad de turnos definida (por ejemplo, 5 turnos).
+
+En caso de empate, se deberá indicar explícitamente.
+
+Simulación de la carrera
+
+Crear al menos 3 autos con nombres distintos.
+
+Definir una carrera y agregar los autos creados.
+
+Ejecutar la simulación mostrando los avances en cada turno.
+
+Finalizada la carrera, mostrar el nombre del ganador y la distancia recorrida
