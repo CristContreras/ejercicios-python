@@ -19,32 +19,42 @@ class Carrera:
         pass
 
     def mostrar_ganador(self):
-        #cada auto tiene una posicion en metros
+
+        velocidades: list[Auto]=self._obtener_velocidades()
+        lista_auxiliar: list[dict]=[]
         
-        #sacar el mayor a una variabel
-        #buscar en el original otro igual
-        #mayor:Auto = None
 
-        lista_velocidades: list[Auto]=[]
-        lista_ganadores=list[int]=[]
-
+    def _obtener_velocidades(self):
+        return [auto.posicion_actual for auto in self.__autos]
+    
+    def _obtener_maximos(self, lista_velocidades:list):
         repetir = True
-        for auto in self.__autos: #guardo las posiciones
-            lista_velocidades.append(auto.posicion_actual)
-        
-        mayor = lista_velocidades[0]
-        indice: int
+        empate = False
+        mayor = 0
+        while repetir:
+            for i in range(len(lista_velocidades)):
+                if lista_velocidades[i]>mayor:
+                    mayor=lista_velocidades[i]
+            
+    def _obtener_ganador(self, velocidades):
+        mayor = 0
+        empate = False
+        indice =0
 
-        mayor = max(lista_velocidades.pop())
-        for i in range(len(lista_velocidades)):
-            if mayor < lista_velocidades[i]:
-                mayor = lista_velocidades[i]
+        for i in range(len(velocidades)): #ver si cada elemento es mayor
+            if velocidades[i]>mayor:
+                mayor=velocidades[i]
                 indice = i
-
-        del lista_velocidades[indice]
-
+                
+            if velocidades[i]==mayor:
+                empate=True
 
         
+
+
+
+    #[12,34,56,12]
+    #lista ganadores: [{"Inidice": 0, "velocidad": 12},{"indice":0}]
 
 
 
