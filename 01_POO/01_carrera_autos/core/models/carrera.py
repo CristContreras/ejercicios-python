@@ -1,4 +1,4 @@
-from auto import Auto
+from .auto import Auto
 
 class Carrera:
     def __init__(self):
@@ -8,19 +8,20 @@ class Carrera:
     def agregar_auto(self, Auto)->None:
         self.__autos.append(Auto)
 
-    def iniciar_carrera(self):
+    def iniciar_carrera(self) -> list[str]:
+        estados: list[str]=[]
         for i in range(self.__turno):
-            print(f"Turno {i+1}")
+            #print(f"Turno {i+1}")
             for auto in self.__autos:
                 auto.avanzar()
-                auto.mostrar_estado()
-    
+                estados.append(auto.obtener_estado())
+        return estados
+
     def mostrar_progreso(self):
         pass
 
-    def mostrar_ganador(self):
+    def obtener_ganador(self) -> int | list[int]:
         indices: list[int] = []
-        empate = False
         #1. obtener el mayor
         mayor = 0
         indice = 0
@@ -38,7 +39,8 @@ class Carrera:
                 for indice in indices:
                     if i != indice:
                         indices.append(i)
-                        empate=True
+        
+        return mayor, indices
         
         
 

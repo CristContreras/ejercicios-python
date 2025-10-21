@@ -20,12 +20,12 @@ class Auto:
         return self.__posicion_actual
 
     #region métodos
-    def avanzar(self):
+    def avanzar(self) -> None:
         metros = r.randint(10, self.__velocidad_maxima)
         self.__posicion_actual+=metros
     
-    def mostrar_estado(self):
-        return f"{self.__nombre}: {self.__posicion_actual}"
+    def obtener_estado(self) -> str:
+        return f"Nombre {self.__nombre} - Posición: {self.__posicion_actual}"
     #endregion
 
 #explicacion
