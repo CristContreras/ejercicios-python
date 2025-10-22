@@ -13,11 +13,7 @@ class Carrera:
 
     def obtener_autos(self)->list[Auto]:
         return self.__autos
-    #iniciar carrera
-    #avanzar()1
-    #mostrar progreso
-    #avanzar()2
-    #mostrar_progreso
+ 
     def iniciar_carrera(self) -> list[str]:
         turnos: list[list[str]] = []
         for i in range(self.__turno):
@@ -28,9 +24,6 @@ class Carrera:
                 turno_actual.append(estado)
             turnos.append(turno_actual)
         return turnos
-
-    """def obtener_progreso(self, estado: list[str]):
-        return [estado[i] for i in range(len(estado))]"""
 
     def obtener_ganador(self) ->list[int]:
         indices: list[int] = []
