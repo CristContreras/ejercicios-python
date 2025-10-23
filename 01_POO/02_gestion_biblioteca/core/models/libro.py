@@ -1,3 +1,5 @@
+import datetime
+
 class Libro:
     def __init__(self, titulo: str, autor: str, isbn: int):
         self.__titulo: str=titulo
@@ -8,7 +10,9 @@ class Libro:
     
     def prestar_libro(self):
         self.__disponible=False
+
         #registrar fecha
-    
+        fecha_prestamo = datetime.date.today()
+        
     def devolver_libro(self):
         

@@ -1,0 +1,30 @@
+Enunciado: Sistema simple de series vistas por usuarios
+
+Se desea desarrollar un pequeño sistema en Python para registrar las series vistas por distintos usuarios.
+
+Cada serie tiene los siguientes datos:
+
+Título
+
+Plataforma donde se emite (por ejemplo: Netflix, HBO, Amazon Prime, etc.)
+
+Año de estreno
+
+Cada usuario tiene:
+
+Nombre
+
+Id
+
+Una lista de series vistas
+
+Cuando un usuario ve una serie, esta se agrega a su lista de series vistas.
+Si el usuario ya la vio, no debe agregarse nuevamente (evitar duplicados).
+
+El programa principal debe:
+
+Crear al menos una serie y un usuario.
+
+Simular que el usuario ve una o más series.
+
+Mostrar por pantalla las series que ha visto el usuario, una debajo de otra.
