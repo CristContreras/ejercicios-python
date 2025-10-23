@@ -1,0 +1,54 @@
+Enunciado: Sistema de Gestión de una Biblioteca
+Deberá desarrollar un programa en Python que simule el funcionamiento de una biblioteca simple con préstamos de libros. 
+El objetivo es aplicar los conceptos de Programación Orientada a Objetos, diseñando clases con atributos, métodos y comportamiento coherente con el problema planteado.
+Clase Libro
+Cada libro debe tener los atributos:
+
+titulo (nombre del libro)
+autor (nombre del autor)
+isbn (código identificador único)
+disponible (booleano que indica si está disponible para préstamo, inicialmente True)
+dias_prestamo (cantidad de días que lleva prestado, inicialmente 0)
+
+Se recomienda definir un método prestar() que cambie el estado del libro a no disponible y registre la fecha de préstamo.
+Se debe implementar un método devolver() que calcule los días transcurridos y determine si hay multa por retraso (más de 7 días).
+Se debe incluir un método mostrar_info() que imprima los datos del libro y su estado actual.
+Clase Usuario
+Cada usuario debe tener:
+
+nombre (identificador del usuario)
+id_usuario (número único de identificación)
+libros_prestados (lista de libros que tiene actualmente)
+multas_acumuladas (monto total de multas, inicialmente 0)
+
+Debe incluir métodos para:
+
+Solicitar préstamo de un libro (validando que no tenga más de 3 libros prestados simultáneamente)
+Devolver un libro prestado
+Mostrar el estado de sus préstamos actuales
+
+Clase Biblioteca
+La clase debe encargarse de coordinar las operaciones de la biblioteca.
+Debe incluir métodos para:
+
+Agregar libros al catálogo
+Registrar nuevos usuarios
+Procesar solicitudes de préstamo (verificando disponibilidad del libro)
+Procesar devoluciones (calculando multas si corresponde: $500 por día de retraso)
+Mostrar el catálogo completo con la disponibilidad de cada libro
+Generar un reporte de usuarios con multas pendientes
+
+Simulación del sistema
+
+Crear al menos 5 libros con datos distintos
+Registrar al menos 3 usuarios diferentes
+Definir una biblioteca y agregar los libros y usuarios creados
+Simular varias operaciones:
+
+Préstamos de diferentes libros a distintos usuarios
+Devoluciones dentro y fuera del plazo establecido
+Intentos de préstamo con libros no disponibles
+Mostrar el estado de la biblioteca en diferentes momentos
+
+
+Finalizada la simulación, generar un reporte con: usuarios con multas, libros más prestados y disponibilidad actual del catálogo
