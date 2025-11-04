@@ -12,9 +12,10 @@ class Cuenta_bancaria:
         self.__saldo+=monto
 
     def retirar(self, monto: float):
-        self._validar_monto(monto)
-        self.__saldo-=monto
-    
+        if monto > 0 and monto < self.__saldo:
+            self.__saldo-=monto
+        else:
+            raise ValueError("El monto debe ser menor al saldo disponible y mayor a cero")
     def fue_retirado(self):
         pass
     
